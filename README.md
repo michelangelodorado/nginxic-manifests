@@ -13,3 +13,4 @@ kubectl apply -f rbac/rbac.yaml
 kubectl apply -f rbac/ap-rbac.yaml
 kubectl apply -f rbac/apdos-rbac.yaml
 ```
+export nginx_ingress=$(kubectl get svc nginx-ingress --namespace=nginx-ingress | tr -s " " | cut -d' ' -f4 | grep -v "EXTERNAL-IP")

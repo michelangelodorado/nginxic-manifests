@@ -4,4 +4,12 @@
 
 ```
 git clone https://github.com/nginxinc/kubernetes-ingress.git --branch v3.1.1
+cd kubernetes-ingress/deployments
+```
+
+```
+kubectl apply -f common/ns-and-sa.yaml
+kubectl apply -f rbac/rbac.yaml
+kubectl apply -f rbac/ap-rbac.yaml
+kubectl apply -f rbac/apdos-rbac.yaml
 ```
